@@ -36,6 +36,50 @@ body {
   transition: var(--transition-value-1);
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+header {
+  min-height: 100vh;
+  color: var(--primary-text-color);
+  overflow: hidden;
+  padding: 2rem 10rem;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3rem 18rem;
+}
+
+.container {
+  display: none;
+  transform: translateY(-100%) scale(0);
+  transition: all 0.4s ease-in-out;
+  background-color: var(--primary-background-color);
+}
+
+.active {
+  display: block;
+  animation: appear 1s ease-in-out;
+  transform: translateY(0) scaleY(1);
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -75,7 +119,7 @@ body {
 
 .theme-btn {
   top: 5%;
-  right: 2.5%;
+  right: 3%;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -95,4 +139,210 @@ body {
   font-size: 1.4rem;
   color: var(--primary-text-color);
   pointer-events: none;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header .home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  text-align: left;
+}
+.header .home-content span {
+  color: var(--secondary-text-color);
+}
+.header .home-content h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header .home-content .social-icons a {
+  font-size: 2rem;
+  color: var(--primary-text-color);
+  transition: var(--transition-value-1);
+  padding-right: 0.5rem;
+}
+.header .home-content .social-icons a:hover {
+  transform: scale(1.1);
+}
+.header .home-img {
+  position: relative;
+  max-width: 30vw;
+  max-height: 30vw;
+  min-height: 30vw;
+  min-width: 30vw;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow-1);
+  transition: var(--transition-value-1);
+  z-index: 2;
+  background: transparent;
+}
+.header .home-img:hover .avatar-picture {
+  animation: move 10s;
+}
+@keyframes move {
+  30% {
+    transform: translateX(-100%);
+  }
+}
+.header .home-img:hover .profile-picture {
+  opacity: 1;
+}
+.header .home-img:active {
+  animation: none;
+}
+.header .home-img:active .avatar-picture {
+  opacity: 0;
+  z-index: -2;
+}
+.header .home-img:active .profile-picture {
+  opacity: 1;
+}
+.header .home-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .home-img .profile-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+.header .home-img .avatar-picture {
+  opacity: 1;
+  border-radius: 50%;
+  animation: reveal 2s infinite;
+}
+@keyframes reveal {
+  50% {
+    transform: translateX(-3%);
+  }
+}
+.header .buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Header - Typing Animation */
+.text-animation {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.text-animation span {
+  position: relative;
+}
+
+.text-animation span::before {
+  content: "Software Developer";
+  color: var(--primary-text-color);
+  animation: words 20s infinite;
+}
+
+.text-animation span::after {
+  content: "";
+  background-color: var(--primary-background-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--primary-background-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--primary-text-color);
+  }
+}
+@keyframes words {
+  0%, 20% {
+    content: "Software Developer";
+  }
+  21%, 40% {
+    content: "Front-End Developer";
+  }
+  41%, 60% {
+    content: "Full-Stack Developer";
+  }
+  61%, 80% {
+    content: "UI/UX Designer";
+  }
+  81%, 100% {
+    content: "Software Designer";
+  }
+}
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
+/*Independed components*/
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+  margin: 1rem 0;
+}
+
+.main-btn {
+  border-radius: 30px;
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--primary-text-color);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+.main-btn .btn-text {
+  padding: 0 1rem;
+}
+.main-btn .btn-icon {
+  background-color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.main-btn:hover {
+  transition: all 0.4s ease-out;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-text-color);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
 }/*# sourceMappingURL=styles.css.map */
