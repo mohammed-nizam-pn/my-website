@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --primary-background-color: #e8eceb;
+  --secondary-background-color: #e09e50;
+  --primary-text-color: #2d3e4e;
+  --secondary-text-color: #8cbdb9;
+  --shadow-color-1: #342628;
+  --styling-color-1: #788402;
+  --styling-color-2: #feaa00;
+  --transition-value-1: all 0.4s ease-in-out;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+  --primary-background-color: #2d3e4e;
+  --secondary-background-color: #8cbdb9;
+  --primary-text-color: #e8eceb;
+  --secondary-text-color: #e09e50;
+  --shadow-color-1: #342628;
+  --styling-color-1: #788402;
+  --styling-color-2: #feaa00;
+}
+
+body {
+  background-color: var(--primary-background-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-text-color);
+  transition: var(--transition-value-1);
+}
+
+//Controls
+.controls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  .control {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: var(--secondary-background-color);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.7rem 0;
+    box-shadow: var(--box-shadow-1);
+    i {
+      font-size: 1.2rem;
+      color: var(--primary-text-color);
+      pointer-events: none;
+    }
+  }
+  .active-btn {
+    background-color: var(--primary-background-color);
+    transition: all 0.4s ease-in-out;
+    i {
+      color: var(--styling-color-2);
+    }
+  }
+}
+
+.theme-btn {
+  top: 5%;
+  right: 2.5%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--secondary-background-color);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--box-shadow-1);
+  transition: all 0.1s ease-in-out;
+  &:active {
+    transform: translateY(-3px);
+  }
+  i {
+    font-size: 1.4rem;
+    color: var(--primary-text-color);
+    pointer-events: none;
+  }
+}

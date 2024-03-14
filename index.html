@@ -20,9 +20,39 @@
     />
     <link rel="icon" type="image/vnd.icon" href="./images/favicon.ico" />
   </head>
+
   <body class="main-container">
-    <header id="home"></header>
-    <main></main>
+    <header class="container header active" id="home"></header>
+    <main>
+      <section class="container about" id="about"></section>
+      <section class="container experience" id="experience"></section>
+      <section class="container portfolio" id="portfolio"></section>
+      <section class="container contact" id="contact"></section>
+    </main>
+
+    <div class="controls">
+      <div class="control active-btn" data-id="home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="control" data-id="about">
+        <i class="fas fa-user"></i>
+      </div>
+      <div class="control" data-id="experience">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div class="control" data-id="portfolio">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="control" data-id="contact">
+        <i class="fas fa-envelope-open"></i>
+      </div>
+    </div>
+    <div class="theme-btn">
+      <i class="fas fa-adjust"></i>
+    </div>
+
+    <script src="app.js"></script>
+
     <footer></footer>
   </body>
 </html>
