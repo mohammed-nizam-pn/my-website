@@ -47,7 +47,8 @@ header {
   min-height: 100vh;
   color: var(--primary-text-color);
   overflow: hidden;
-  padding: 4%;
+  margin-right: 3%;
+  padding: 2rem;
 }
 
 section {
