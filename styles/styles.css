@@ -528,6 +528,54 @@ section {
   cursor: pointer;
 }
 
+/* Contact Section */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 12rem;
+  flex-direction: column;
+}
+.contact-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.contact-container .form input,
+.contact-container .form textarea {
+  width: 30vw;
+  font-family: inherit;
+  background: transparent;
+  border: 2px solid var(--secondary-text-color);
+  line-height: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: inherit;
+  color: var(--primary-text-color);
+  resize: vertical;
+}
+.contact-container .form input:focus,
+.contact-container .form textarea:focus {
+  outline: 2px solid var(--secondary-text-color);
+}
+.contact-container .form button {
+  width: 10vw;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: var(--primary-text-color);
+  background: transparent;
+  border: 2px solid var(--secondary-text-color);
+  cursor: pointer;
+}
+.contact-container .form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 5px var(--secondary-text-color);
+}
+
 /*Independed components*/
 .btn-con {
   display: flex;
