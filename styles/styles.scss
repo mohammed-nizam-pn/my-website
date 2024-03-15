@@ -19,7 +19,7 @@
 }
 
 .dark-mode {
-  --primary-background-color: #2d3e4e;
+  --primary-background-color: #121212;
   --secondary-background-color: #8cbdb9;
   --primary-text-color: #e8eceb;
   --secondary-text-color: #e09e50;
@@ -457,6 +457,9 @@ section {
     &:nth-child(even) {
       padding-left: calc(50% + 30px);
     }
+    .education {
+      background-color: var(--primary-background-color);
+    }
   }
   .timeline-dot {
     height: 21px;
@@ -490,7 +493,7 @@ section {
       font-size: 20px;
       font-weight: 500;
       color: var(--primary-text-color);
-      margin: 0 0 10px;
+      margin: 0 0 7px;
     }
     p {
       color: var(--primary-text-color);
@@ -508,6 +511,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: default;
   .project-item {
     display: flex;
     border: 2px solid var(--secondary-text-color);
@@ -523,7 +527,7 @@ section {
       height: 20vw;
       img {
         object-fit: cover;
-        max-width: 20vw;
+        min-height: 20vw;
         min-width: 20vw;
         max-height: 20vw;
         max-width: 20vw;
@@ -531,6 +535,9 @@ section {
     }
     .project-content {
       padding: 1rem;
+      h2 {
+        margin-bottom: 1rem;
+      }
     }
     &:first-child {
       margin-top: 4rem;
@@ -538,12 +545,18 @@ section {
     &:hover {
       transform: scale(1.02);
     }
+    &:last-child {
+      .project-content {
+        cursor: pointer;
+      }
+    }
   }
 }
 .all-projects {
   text-align: center;
+  text-transform: uppercase;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
 }

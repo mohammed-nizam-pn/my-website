@@ -19,7 +19,7 @@
 }
 
 .dark-mode {
-  --primary-background-color: #2d3e4e;
+  --primary-background-color: #121212;
   --secondary-background-color: #8cbdb9;
   --primary-text-color: #e8eceb;
   --secondary-text-color: #e09e50;
@@ -429,6 +429,9 @@ section {
 .timeline-items .timeline-item:nth-child(even) {
   padding-left: calc(50% + 30px);
 }
+.timeline-items .timeline-item .education {
+  background-color: var(--primary-background-color);
+}
 .timeline-items .timeline-dot {
   height: 21px;
   width: 21px;
@@ -462,7 +465,7 @@ section {
   font-size: 20px;
   font-weight: 500;
   color: var(--primary-text-color);
-  margin: 0 0 10px;
+  margin: 0 0 7px;
 }
 .timeline-items .timeline-content p {
   color: var(--primary-text-color);
@@ -478,6 +481,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: default;
 }
 .project-items .project-item {
   display: flex;
@@ -497,7 +501,7 @@ section {
 .project-items .project-item .img-container img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 20vw;
+  min-height: 20vw;
   min-width: 20vw;
   max-height: 20vw;
   max-width: 20vw;
@@ -505,17 +509,24 @@ section {
 .project-items .project-item .project-content {
   padding: 1rem;
 }
+.project-items .project-item .project-content h2 {
+  margin-bottom: 1rem;
+}
 .project-items .project-item:first-child {
   margin-top: 4rem;
 }
 .project-items .project-item:hover {
   transform: scale(1.02);
 }
+.project-items .project-item:last-child .project-content {
+  cursor: pointer;
+}
 
 .all-projects {
   text-align: center;
+  text-transform: uppercase;
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
 }

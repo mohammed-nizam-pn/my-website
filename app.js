@@ -18,7 +18,7 @@
   })
   //checking for theme on page load
   document.addEventListener("DOMContentLoaded", function (event) {
-    var background = localStorage.getItem("background")
+    let background = localStorage.getItem("background")
     if (background) {
       document.body.classList.add(background)
     }
