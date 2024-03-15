@@ -9,5 +9,18 @@
   })
   document.querySelector(".theme-btn").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode")
+    //storing theme value to localStorage
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("background", "dark-mode")
+    } else {
+      localStorage.setItem("background", "")
+    }
+  })
+  //checking for theme on page load
+  document.addEventListener("DOMContentLoaded", function (event) {
+    var background = localStorage.getItem("background")
+    if (background) {
+      document.body.classList.add(background)
+    }
   })
 })()
