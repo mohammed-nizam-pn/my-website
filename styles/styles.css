@@ -193,7 +193,7 @@ section {
   z-index: 2;
   background: transparent;
 }
-.header .home-img:hover .avatar-picture {
+.header .home-img:hover .avatar-picture, .header .home-img:active .avatar-picture {
   animation: move 10s;
 }
 @keyframes move {
@@ -201,18 +201,7 @@ section {
     transform: translateX(-100%);
   }
 }
-.header .home-img:hover .profile-picture {
-  opacity: 1;
-}
-.header .home-img:active .avatar-picture {
-  animation: move 10s;
-}
-@keyframes move {
-  30% {
-    transform: translateX(-100%);
-  }
-}
-.header .home-img:active .profile-picture {
+.header .home-img:hover .profile-picture, .header .home-img:active .profile-picture {
   opacity: 1;
 }
 .header .home-img img {
@@ -377,6 +366,9 @@ section {
   cursor: default;
 }
 .skills span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.5rem;
   border: 2px solid var(--primary-text-color);
   border-radius: 1rem;
@@ -536,6 +528,38 @@ section {
   margin: 4rem 12rem;
   flex-direction: column;
 }
+.contact-container h4 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.contact-container .contact-btns {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.contact-container .contact-btns .contact-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: var(--transition-value-1);
+}
+.contact-container .contact-btns .contact-btn i {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.contact-container .contact-btns .contact-btn span {
+  font-size: 0.9rem;
+}
+.contact-container .contact-btns .contact-btn:hover {
+  transform: scale(1.02);
+  box-shadow: var(--box-shadow-1);
+}
 .contact-container .form {
   display: flex;
   flex-direction: column;
@@ -571,8 +595,8 @@ section {
   border: 2px solid var(--secondary-text-color);
   cursor: pointer;
 }
-.contact-container .form button:hover {
-  transform: translateY(-3px);
+.contact-container .form button:active {
+  transform: scale(3px);
   box-shadow: 0 2px 5px var(--secondary-text-color);
 }
 
@@ -614,10 +638,10 @@ section {
   transition: all 0.4s ease-out;
   z-index: -1;
 }
-.main-btn:hover {
+.main-btn:hover, .main-btn:active {
   transition: all 0.4s ease-out;
 }
-.main-btn:hover::before {
+.main-btn:hover::before, .main-btn:active::before {
   width: 100%;
   height: 100%;
   background-color: var(--primary-text-color);

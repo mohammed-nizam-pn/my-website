@@ -232,12 +232,30 @@
           <h2>Get in <span>touch</span><span class="bg-text">contact</span></h2>
         </div>
         <div class="contact-container">
+          <h4>Click to Chat</h4>
           <div class="contact-btns">
-            <div class="mail-btn">Mail</div>
-            <div class="whatsapp-btn">WhatsApp</div>
-            <div class="messenger-btn">Messenger</div>
+            <a href="mailto:mohammednizampn@gmail.com"
+              ><div class="contact-btn mail-btn">
+                <i class="fas fa-envelope"></i><span>Mail</span>
+              </div></a
+            >
+            <a href="https://wa.me/+447442206711" target="_blank"
+              ><div class="contact-btn whatsapp-btn">
+                <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+              </div></a
+            >
+            <a href="" target="_blank"
+              ><div class="contact-btn messenger-btn">
+                <i class="fab fa-facebook-messenger"></i><span>Messenger</span>
+              </div></a
+            >
           </div>
-          <form class="form">
+          <h4>Drop me a Message</h4>
+          <form
+            class="form"
+            action="https://formspree.io/f/xleqwroo"
+            method="POST"
+          >
             <input
               type="text"
               id="name"
@@ -261,6 +279,7 @@
               rows="3"
               placeholder="Message"
               required
+              name="message"
             ></textarea>
             <button class="submit-btn" type="submit" id="submit-btn">
               Send <i class="fas fa-paper-plane"></i>

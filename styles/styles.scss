@@ -192,19 +192,7 @@ section {
     transition: var(--transition-value-1);
     z-index: 2;
     background: transparent;
-    &:hover {
-      .avatar-picture {
-        animation: move 10s;
-        @keyframes move {
-          30% {
-            transform: translateX(-100%);
-          }
-        }
-      }
-      .profile-picture {
-        opacity: 1;
-      }
-    }
+    &:hover,
     &:active {
       .avatar-picture {
         animation: move 10s;
@@ -407,6 +395,9 @@ section {
   gap: 1rem;
   cursor: default;
   span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0.5rem;
     border: 2px solid var(--primary-text-color);
     border-radius: 1rem;
@@ -564,6 +555,38 @@ section {
   align-items: center;
   margin: 4rem 12rem;
   flex-direction: column;
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .contact-btns {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    .contact-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border: 2px solid var(--primary-text-color);
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: var(--transition-value-1);
+      i {
+        font-size: 2rem;
+        padding: 0.5rem;
+      }
+      span {
+        font-size: 0.9rem;
+      }
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: var(--box-shadow-1);
+      }
+    }
+  }
   .form {
     display: flex;
     flex-direction: column;
@@ -596,8 +619,8 @@ section {
       background: transparent;
       border: 2px solid var(--secondary-text-color);
       cursor: pointer;
-      &:hover {
-        transform: translateY(-3px);
+      &:active {
+        transform: scale(3px);
         box-shadow: 0 2px 5px var(--secondary-text-color);
       }
     }
@@ -642,7 +665,8 @@ section {
     transition: all 0.4s ease-out;
     z-index: -1;
   }
-  &:hover {
+  &:hover,
+  &:active {
     transition: all 0.4s ease-out;
     &::before {
       width: 100%;
