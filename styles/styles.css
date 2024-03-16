@@ -344,9 +344,6 @@ section {
   padding-right: 2.5rem;
   margin: auto;
 }
-.about-container .left-about h4 {
-  color: var(--styling-color-1);
-}
 .about-container .left-about p {
   line-height: 1.8rem;
   color: var(--text-background-1);
@@ -355,6 +352,7 @@ section {
 .about-container .left-about h4 {
   font-size: 2.5rem;
   text-transform: uppercase;
+  color: var(--styling-color-1);
 }
 
 .skills {
@@ -381,7 +379,7 @@ section {
 
 .stat-title {
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-align: center;
   padding: 2rem 0;
   position: relative;
@@ -734,6 +732,13 @@ section {
     font-size: 0.9rem;
     border: 1px solid var(--styling-color-1);
   }
+  .main-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .main-title h2 .bg-text {
+    font-size: 4rem;
+  }
   .header {
     padding: 0 !important;
     flex-direction: column;
@@ -769,5 +774,64 @@ section {
     min-height: 50vw;
     max-width: 50vw;
     max-height: 50vw;
+  }
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+  }
+  .about-container .left-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  .about-container .left-about h4 {
+    font-size: 1.5rem;
+  }
+  .about-container .left-about p {
+    font-size: 0.9rem;
+    line-height: inherit;
+    padding: 0.5rem;
+  }
+  .about-container .right-about {
+    grid-gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  .about-container .right-about .about-item .abt-text {
+    padding: 1.1rem;
+  }
+  .about-container .right-about .about-item .abt-text .large-text {
+    font-size: 1.5rem;
+  }
+  .about-container .right-about .about-item .abt-text .small-text {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: inherit;
+  }
+  .about-container .right-about .about-item .abt-text .small-text::before {
+    top: 10px;
+    width: 1rem;
+  }
+  .about-stats {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+  }
+  .about-stats .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    font-size: 0.9rem;
+    gap: 0.8rem;
+  }
+  .about-stats .skills span {
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+  }
+  .about-stats .stat-title {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -35,6 +35,16 @@
     }
   }
 
+  .main-title {
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      .bg-text {
+        font-size: 4rem;
+      }
+    }
+  }
+
   .header {
     padding: 0 !important;
     flex-direction: column;
@@ -70,6 +80,67 @@
       min-height: 50vw;
       max-width: 50vw;
       max-height: 50vw;
+    }
+  }
+  .about-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    .left-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 1rem 0;
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+        line-height: inherit;
+        padding: 0.5rem;
+      }
+    }
+    .right-about {
+      grid-gap: 1rem;
+      padding: 1rem 2rem;
+      .about-item {
+        .abt-text {
+          padding: 1.1rem;
+          .large-text {
+            font-size: 1.5rem;
+          }
+          .small-text {
+            padding-left: 1.5rem;
+            font-size: 1rem;
+            letter-spacing: inherit;
+            &::before {
+              top: 10px;
+              width: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-stats {
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+      font-size: 0.9rem;
+      gap: 0.8rem;
+      span {
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+      }
+    }
+    .stat-title {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1rem 0;
     }
   }
 }
