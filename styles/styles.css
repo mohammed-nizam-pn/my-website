@@ -621,6 +621,9 @@ section {
   transform: scale(3px);
   box-shadow: var(--shadow-2);
 }
+.contact-container .form .submit-btn-icon {
+  display: none;
+}
 
 /*Independed components*/
 .btn-con {
@@ -800,7 +803,6 @@ section {
   }
   .about-container .right-about {
     grid-gap: 1rem;
-    padding: 1rem 2rem;
   }
   .about-container .right-about .about-item .abt-text {
     padding: 1.1rem;
@@ -875,5 +877,79 @@ section {
   .timeline-items .timeline-content p {
     font-size: 0.8rem;
     line-height: inherit;
+  }
+  .project-items .project-item {
+    max-width: 100vw;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  .project-items .project-item .img-container {
+    display: none;
+  }
+  .project-items .project-item .project-content {
+    padding: 0.5rem;
+  }
+  .project-items .project-item .project-content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .project-items .project-item .project-content p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: inherit;
+    text-align: center;
+  }
+  .all-projects {
+    padding: 1rem 0 3rem;
+    font-size: 1rem;
+  }
+  .contact-container {
+    margin: 3rem auto;
+  }
+  .contact-container h4 {
+    margin-bottom: 2rem;
+  }
+  .contact-container .contact-btns {
+    margin-bottom: 2rem;
+  }
+  .contact-container .contact-btns .contact-btn {
+    padding: 0.5rem;
+  }
+  .contact-container .contact-btns .contact-btn i {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .contact-container .contact-btns .contact-btn span {
+    font-size: 0.8rem;
+  }
+  .contact-container .form {
+    gap: 1rem;
+  }
+  .contact-container .form input,
+  .contact-container .form textarea {
+    min-width: 80vw;
+  }
+  .contact-container .form .submit-btn-icon {
+    display: flex;
+  }
+  .contact-container .form .submit-btn {
+    display: none;
+  }
+  .contact-container .form button {
+    width: auto;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--text-background-1);
+    background: transparent;
+    border: 2px solid var(--text-background-2);
+    cursor: pointer;
+  }
+  .contact-container .form button:active {
+    transform: scale(3px);
+    box-shadow: var(--shadow-2);
   }
 }/*# sourceMappingURL=styles.css.map */
