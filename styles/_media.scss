@@ -9,7 +9,12 @@
     width: 100%;
     background-color: var(--styling-color-2);
     .control {
-      margin: 0.7rem 0.3rem;
+      margin: 0.5rem 0.3rem;
+      width: 40px;
+      height: 40px;
+    }
+    .active-btn {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
   }
   .theme-btn {
