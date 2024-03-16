@@ -8,20 +8,22 @@
 
 :root {
   --background-1: #e8eceb;
-  --background-2: #f7f4ef;
   --text-background-1: #2d3e4e;
-  --text-background-2: #354e64;
+  --text-background-2: #466663;
   --transition-1: all 0.4s ease-in-out;
   --shadow-1: 0 0 15px rgba(0, 0, 0, 0.7);
+  --styling-color-1: #e09e50;
+  --heading-color: black;
+  --shadow-2: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode {
   --background-1: #2d3e4e;
-  --background-2: #f7f4ef;
   --text-background-1: #e8eceb;
-  --text-background-2: #354e64;
+  --text-background-2: #c5b59a;
   --transition-1: all 0.4s ease-in-out;
   --shadow-1: 0 0 15px black;
+  --heading-color: white;
 }
 
 body {
@@ -100,7 +102,7 @@ section {
     justify-content: center;
     align-items: center;
     margin: 0.8rem 0;
-    border: 3px solid var(--text-background-1);
+    border: 2px solid var(--text-background-1);
     i {
       font-size: 1.2rem;
       color: var(--text-background-1);
@@ -130,7 +132,7 @@ section {
   justify-content: center;
   align-items: center;
   transition: all 0.1s ease-in-out;
-  border: 3px solid var(--text-background-1);
+  border: 2px solid var(--text-background-1);
   &:active {
     transform: translateY(-3px);
   }
@@ -154,8 +156,8 @@ section {
     justify-content: center;
     align-items: baseline;
     text-align: left;
-    span {
-      color: var(--secondary-text-color);
+    .colored-name {
+      color: var(--styling-color-1);
     }
     h1 {
       font-size: 5rem;
@@ -164,13 +166,14 @@ section {
       text-transform: uppercase;
     }
     .social-icons a {
-      font-size: 2rem;
-      color: var(--primary-text-color);
-      transition: var(--transition-value-1);
+      font-size: 1.7rem;
+      color: var(--text-background-1);
+      transition: var(--transition-1);
       padding-right: 0.5rem;
     }
     .social-icons a:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
+      transition: var(--transition-1);
     }
   }
   .home-img {
@@ -184,9 +187,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--secondary-text-color);
-    box-shadow: var(--box-shadow-1);
-    transition: var(--transition-value-1);
+    border: 2px solid var(--styling-color-1);
     z-index: 2;
     background: transparent;
     &:hover,
@@ -248,24 +249,24 @@ section {
 
 .text-animation span::before {
   content: "Software Developer";
-  color: var(--primary-text-color);
+  color: var(--text-background-1);
   animation: words 20s infinite;
 }
 
 .text-animation span::after {
   content: "";
-  background-color: var(--primary-background-color);
+  background-color: var(--background-1);
   position: absolute;
   width: calc(100% + 8px);
   height: 100%;
-  border-left: 3px solid var(--primary-background-color);
+  border-left: 3px solid var(--background-1);
   right: -8px;
   animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 @keyframes cursor {
   to {
-    border-left: 2px solid var(--primary-text-color);
+    border-left: 2px solid var(--text-background-1);
   }
 }
 
@@ -328,15 +329,14 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     .about-item {
-      border: 1px solid var(--secondary-text-color);
+      border: 2px solid var(--styling-color-1);
       border-radius: 5px;
-      transition: all 0.4s ease-in-out;
-      box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+      transition: var(--transition-1);
       &:hover {
         cursor: default;
         transform: translateY(-5px);
-        border: 1px solid var(--primary-text-color);
-        box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+        border: 2px solid var(--styling-color-1);
+        box-shadow: var(--shadow-2);
       }
       .abt-text {
         padding: 1.5rem;
@@ -345,14 +345,14 @@ section {
         .large-text {
           font-size: 2.5rem;
           font-weight: 700;
-          color: var(--color-secondary);
+          color: var(--text-background-1);
         }
         .small-text {
           padding-left: 3rem;
           position: relative;
           text-transform: uppercase;
           font-size: 1.1rem;
-          color: var(--color-grey-1);
+          color: var(--text-background-2);
           letter-spacing: 2px;
           &::before {
             content: "";
@@ -361,7 +361,7 @@ section {
             top: 15px;
             width: 2rem;
             height: 2px;
-            background-color: var(--secondary-text-color);
+            background-color: var(--styling-color-1);
           }
         }
       }
@@ -371,9 +371,12 @@ section {
   .left-about {
     padding-right: 2.5rem;
     margin: auto;
+    h4 {
+      color: var(--heading-color);
+    }
     p {
       line-height: 1.8rem;
-      color: var(--primary-text-color);
+      color: var(--text-background-2);
       text-align: justify;
     }
     h4 {
@@ -396,21 +399,22 @@ section {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    border: 2px solid var(--primary-text-color);
+    border: 2px solid var(--text-background-1);
     border-radius: 1rem;
   }
   .highlight {
-    background-color: var(--primary-text-color);
-    color: var(--primary-background-color);
+    background-color: var(--text-background-1);
+    color: var(--background-1);
   }
 }
 
 .stat-title {
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   text-align: center;
   padding: 2rem 0;
   position: relative;
+  color: var(--heading-color);
   &::before {
     content: "";
     position: absolute;
@@ -418,7 +422,7 @@ section {
     top: 0;
     width: 50%;
     height: 1px;
-    background-color: var(--secondary-text-color);
+    background-color: var(--text-background-2);
     transform: translateX(-50%);
   }
 }
@@ -437,7 +441,7 @@ section {
     width: 5px;
     height: 100%;
     position: absolute;
-    background-color: var(--primary-text-color);
+    background-color: var(--styling-color-1);
     left: calc(50% - 1px);
   }
   .timeline-item {
@@ -455,14 +459,16 @@ section {
       padding-left: calc(50% + 30px);
     }
     .education {
-      background-color: var(--primary-background-color);
+      border: 2px solid var(--text-background-2);
+      background: transparent;
+      color: var(--text-background-1);
     }
   }
   .timeline-dot {
     height: 21px;
     width: 21px;
-    background-color: var(--primary-text-color);
-    box-shadow: 0 0 25px var(--box-shadow-1), 0 0 50px var(--box-shadow-1);
+    background-color: var(--styling-color-1);
+    box-shadow: 0 0 15px var(--styling-color-1);
     position: absolute;
     border-radius: 50%;
     left: calc(50% - 9px);
@@ -475,16 +481,18 @@ section {
     margin: 6px 0 15px;
   }
   .timeline-content {
-    background-color: var(--secondary-background-color);
-    border: 3px solid var(--primary-text-color);
+    background-color: var(--text-background-2);
     padding: 30px 50px;
     border-radius: 4rem;
     box-shadow: 0 0 10px var(--box-shadow-1);
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: var(--transition-1);
+    color: var(--background-1);
     &:hover {
-      box-shadow: 0 0 25px var(--secondary-text-color);
-      transform: scale(1.05);
+      box-shadow: var(--shadow-2);
+      transform: scale(1.02);
+      border: 2px solid var(--styling-color-1);
+      transition: var(--transition-1);
     }
     h3 {
       font-size: 20px;
@@ -511,14 +519,13 @@ section {
   cursor: default;
   .project-item {
     display: flex;
-    border: 2px solid var(--secondary-text-color);
+    border: 2px solid var(--text-background-2);
     align-items: center;
     margin: 1.2rem 10rem;
-    box-shadow: 0 0 5px gray;
     overflow: hidden;
     max-width: 60%;
     border-radius: 2rem;
-    transition: all 0.4s ease-in-out;
+    transition: var(--transition-1);
     .img-container {
       width: 20vw;
       height: 20vw;
@@ -534,6 +541,11 @@ section {
       padding: 1rem;
       h2 {
         margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+        text-align: justify;
       }
     }
     &:first-child {
@@ -541,6 +553,7 @@ section {
     }
     &:hover {
       transform: scale(1.02);
+      box-shadow: var(--shadow-2);
     }
     &:last-child {
       .project-content {
@@ -580,12 +593,12 @@ section {
       justify-content: center;
       align-items: center;
       padding: 1rem;
-      border: 2px solid var(--primary-text-color);
+      border: 2px solid var(--text-background-2);
       border-radius: 1rem;
       cursor: pointer;
-      transition: var(--transition-value-1);
+      transition: var(--transition-1);
       i {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0.5rem;
       }
       span {
@@ -593,7 +606,7 @@ section {
       }
       &:hover {
         transform: scale(1.02);
-        box-shadow: var(--box-shadow-1);
+        box-shadow: var(--shadow-2);
       }
     }
   }
@@ -607,15 +620,15 @@ section {
       width: 30vw;
       font-family: inherit;
       background: transparent;
-      border: 2px solid var(--secondary-text-color);
+      border: 2px solid var(--text-background-2);
       line-height: 2rem;
       padding: 0.5rem;
       border-radius: 1rem;
       font-size: inherit;
-      color: var(--primary-text-color);
+      color: var(--text-background-1);
       resize: vertical;
       &:focus {
-        outline: 2px solid var(--secondary-text-color);
+        outline: 2px solid var(--text-background-2);
       }
     }
     button {
@@ -625,13 +638,13 @@ section {
       font-weight: 600;
       text-align: center;
       border-radius: 0.5rem;
-      color: var(--primary-text-color);
+      color: var(--text-background-1);
       background: transparent;
-      border: 2px solid var(--secondary-text-color);
+      border: 2px solid var(--text-background-2);
       cursor: pointer;
       &:active {
         transform: scale(3px);
-        box-shadow: 0 2px 5px var(--secondary-text-color);
+        box-shadow: var(--shadow-2);
       }
     }
   }
@@ -650,7 +663,7 @@ section {
   color: var(--text-background-1);
   font-weight: 600;
   position: relative;
-  border: 3px solid var(--text-background-1);
+  border: 2px solid var(--text-background-1);
   display: flex;
   align-self: flex-start;
   align-items: center;
@@ -659,12 +672,13 @@ section {
     padding: 0 1rem;
   }
   .btn-icon {
-    background-color: var(--primary-text-color);
+    background-color: var(--styling-color-1);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     padding: 1rem;
+    border: 2px solid var(--styling-color-1);
   }
   &::before {
     content: "";
@@ -681,7 +695,7 @@ section {
     &::before {
       width: 100%;
       height: 100%;
-      background-color: var(--primary-text-color);
+      background-color: var(--styling-color-1);
       transform: translateX(0);
       transition: all 0.4s ease-out;
     }
@@ -696,19 +710,19 @@ section {
     font-size: 4rem;
     font-weight: 700;
     span {
-      color: var(--secondary-text-color);
+      color: var(--text-background-2);
     }
     .bg-text {
       position: absolute;
       top: 50%;
       left: 50%;
-      color: var(--styling-color-2);
+      color: var(--text-background-2);
       transition: all 0.4s ease-in-out;
       z-index: -1;
       transform: translate(-50%, -50%);
       font-weight: 800;
       font-size: 6rem;
-      opacity: 0.3;
+      opacity: 0.15;
     }
   }
 }
