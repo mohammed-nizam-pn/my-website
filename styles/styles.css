@@ -7,33 +7,29 @@
 }
 
 :root {
-  --primary-background-color: #e8eceb;
-  --secondary-background-color: #e09e50;
-  --primary-text-color: #2d3e4e;
-  --secondary-text-color: #8cbdb9;
-  --shadow-color-1: black;
-  --styling-color-1: #788402;
-  --styling-color-2: #feaa00;
-  --transition-value-1: all 0.4s ease-in-out;
-  --box-shadow-1: 0 0px 10px var(--shadow-color-1);
+  --background-1: #e8eceb;
+  --background-2: #f7f4ef;
+  --text-background-1: #2d3e4e;
+  --text-background-2: #354e64;
+  --transition-1: all 0.4s ease-in-out;
+  --shadow-1: 0 0 15px rgba(0, 0, 0, 0.7);
 }
 
 .dark-mode {
-  --primary-background-color: #3c2a21;
-  --secondary-background-color: #8cbdb9;
-  --primary-text-color: #5c8374;
-  --secondary-text-color: #93b1a6;
-  --shadow-color-1: black;
-  --styling-color-1: #788402;
-  --styling-color-2: #feaa00;
+  --background-1: #2d3e4e;
+  --background-2: #f7f4ef;
+  --text-background-1: #e8eceb;
+  --text-background-2: #354e64;
+  --transition-1: all 0.4s ease-in-out;
+  --shadow-1: 0 0 15px black;
 }
 
 body {
-  background-color: var(--primary-background-color);
+  background-color: var(--background-1);
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
-  color: var(--primary-text-color);
-  transition: var(--transition-value-1);
+  font-size: 16px;
+  color: var(--text-background-1);
+  transition: var(--transition-1);
 }
 
 a {
@@ -45,7 +41,7 @@ a {
 
 header {
   min-height: 100vh;
-  color: var(--primary-text-color);
+  color: var(--text-background-1);
   overflow: hidden;
   padding: 2rem 5rem;
 }
@@ -96,27 +92,28 @@ section {
 .controls .control {
   padding: 1rem;
   cursor: pointer;
-  background-color: var(--secondary-background-color);
+  background-color: var(--background-1);
   width: 55px;
   height: 55px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.7rem 0;
-  box-shadow: var(--box-shadow-1);
+  margin: 0.8rem 0;
+  border: 3px solid var(--text-background-1);
 }
 .controls .control i {
   font-size: 1.2rem;
-  color: var(--primary-text-color);
+  color: var(--text-background-1);
   pointer-events: none;
 }
 .controls .active-btn {
-  background-color: var(--primary-background-color);
+  background-color: var(--text-background-1);
   transition: all 0.4s ease-in-out;
+  box-shadow: var(--shadow-1);
 }
 .controls .active-btn i {
-  color: var(--styling-color-2);
+  color: var(--background-1);
 }
 
 .theme-btn {
@@ -131,15 +128,15 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--box-shadow-1);
   transition: all 0.1s ease-in-out;
+  border: 3px solid var(--text-background-1);
 }
 .theme-btn:active {
   transform: translateY(-3px);
 }
 .theme-btn i {
-  font-size: 1.4rem;
-  color: var(--primary-text-color);
+  font-size: 1.2rem;
+  color: var(--text-background-1);
   pointer-events: none;
 }
 
@@ -620,10 +617,10 @@ section {
 
 .main-btn {
   border-radius: 30px;
-  color: var(--secondary-text-color);
+  color: var(--text-background-1);
   font-weight: 600;
   position: relative;
-  border: 1px solid var(--primary-text-color);
+  border: 3px solid var(--text-background-1);
   display: flex;
   align-self: flex-start;
   align-items: center;
