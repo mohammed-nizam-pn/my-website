@@ -764,6 +764,7 @@ section {
     top: 1%;
     width: 45px;
     height: 45px;
+    background-color: var(--background-1);
   }
   .main-btn {
     font-weight: 500;
