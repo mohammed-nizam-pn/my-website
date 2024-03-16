@@ -713,6 +713,9 @@ section {
   .controls .control {
     margin: 0.7rem 0.3rem;
   }
+  .theme-btn {
+    top: 1%;
+  }
   .main-btn {
     font-weight: 500;
   }
