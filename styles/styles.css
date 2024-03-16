@@ -700,6 +700,46 @@ section {
   opacity: 0.15;
 }
 
+@media screen and (max-width: 360px) {
+  .buttons-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0 !important;
+  }
+  .buttons-container .social-icons a {
+    padding: 0 0.4rem !important;
+  }
+  .buttons-container .btn-con {
+    margin: 0.5rem 0;
+    display: block;
+    align-self: inherit;
+  }
+  .control {
+    margin: 0.5rem !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .theme-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .main-title h2 .bg-text {
+    font-size: 3.2rem !important;
+  }
+  .about-container .left-about p {
+    font-size: 0.8rem !important;
+    line-height: inherit;
+    padding: 0.5rem;
+  }
+  .about-container .right-about {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  .about-stats .skills {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 @media screen and (max-width: 600px) {
   .controls {
     top: auto;
@@ -712,17 +752,17 @@ section {
     background-color: var(--styling-color-2);
   }
   .controls .control {
-    margin: 0.5rem 0.3rem;
-    width: 40px;
-    height: 40px;
+    margin: 0.8rem;
+    width: 45px;
+    height: 45px;
   }
   .controls .active-btn {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
   .theme-btn {
     top: 1%;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
   .main-btn {
     font-weight: 500;
