@@ -727,6 +727,7 @@ section {
     border: 1px solid var(--styling-color-1);
   }
   .header {
+    padding: 0 !important;
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -749,7 +750,7 @@ section {
   }
   .header .home-content .social-icons a {
     font-size: 1.1rem;
-    padding-right: 0.5rem;
+    padding-right: 0.8rem;
   }
   .header .buttons-container {
     justify-content: center;

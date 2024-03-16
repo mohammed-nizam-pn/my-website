@@ -28,6 +28,7 @@
   }
 
   .header {
+    padding: 0 !important;
     flex-direction: column;
     gap: 1.5rem;
     .home-content {
@@ -48,7 +49,7 @@
       }
       .social-icons a {
         font-size: 1.1rem;
-        padding-right: 0.5rem;
+        padding-right: 0.8rem;
       }
     }
     .buttons-container {
