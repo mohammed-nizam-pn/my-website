@@ -1267,4 +1267,50 @@ section {
     line-height: inherit;
     text-align: justify;
   }
+}
+@media screen and (min-width: 801px) and (max-width: 950px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .home-content .buttons-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .header .home-content h1 {
+    font-size: 4.25rem;
+  }
+  .main-title h2 {
+    font-size: 3rem;
+  }
+  .main-title .bg-text {
+    font-size: 4.5rem !important;
+  }
+  .about-container {
+    padding: 2rem 5rem 2rem 1rem;
+  }
+  .about-container .left-about h4 {
+    font-size: 2rem;
+  }
+  .about-container .left-about p {
+    font-size: 0.8rem;
+  }
+  .about-container .right-about .about-item .abt-text {
+    padding: 0.1rem 0.8rem;
+  }
+  .about-container .right-about .about-item .abt-text .large-text {
+    font-size: 2rem;
+  }
+  .about-container .right-about .about-item .abt-text .small-text {
+    font-size: 0.9rem;
+  }
+  .about-stats {
+    padding: 2rem 5rem 2rem 1rem;
+  }
+  .about-stats h4 {
+    font-size: 2rem;
+  }
+  .about-stats .skills {
+    grid-template-columns: repeat(5, 6fr);
+    padding: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

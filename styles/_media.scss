@@ -617,3 +617,60 @@
     }
   }
 }
+
+@media screen and (min-width: 801px) and (max-width: 950px) {
+  .header {
+    flex-direction: column;
+    .home-content {
+      .buttons-container {
+        width: 100%;
+        justify-content: space-around;
+      }
+      h1 {
+        font-size: 4.25rem;
+      }
+    }
+  }
+  .main-title {
+    h2 {
+      font-size: 3rem;
+    }
+    .bg-text {
+      font-size: 4.5rem !important;
+    }
+  }
+  .about-container {
+    padding: 2rem 5rem 2rem 1rem;
+    .left-about {
+      h4 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .right-about {
+      .about-item {
+        .abt-text {
+          padding: 0.1rem 0.8rem;
+          .large-text {
+            font-size: 2rem;
+          }
+          .small-text {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+  .about-stats {
+    padding: 2rem 5rem 2rem 1rem;
+    h4 {
+      font-size: 2rem;
+    }
+    .skills {
+      grid-template-columns: repeat(5, 6fr);
+      padding: 0;
+    }
+  }
+}
