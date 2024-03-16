@@ -11,19 +11,19 @@
   --secondary-background-color: #e09e50;
   --primary-text-color: #2d3e4e;
   --secondary-text-color: #8cbdb9;
-  --shadow-color-1: #342628;
+  --shadow-color-1: black;
   --styling-color-1: #788402;
   --styling-color-2: #feaa00;
   --transition-value-1: all 0.4s ease-in-out;
-  --box-shadow-1: 0 3px 15px var(--shadow-color-1);
+  --box-shadow-1: 0 0px 10px var(--shadow-color-1);
 }
 
 .dark-mode {
-  --primary-background-color: rgb(41, 37, 37);
+  --primary-background-color: #3c2a21;
   --secondary-background-color: #8cbdb9;
-  --primary-text-color: #e8eceb;
-  --secondary-text-color: #e09e50;
-  --shadow-color-1: #e09e50;
+  --primary-text-color: #5c8374;
+  --secondary-text-color: #93b1a6;
+  --shadow-color-1: black;
   --styling-color-1: #788402;
   --styling-color-2: #feaa00;
 }
