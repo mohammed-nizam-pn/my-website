@@ -19,6 +19,8 @@
   }
   .theme-btn {
     top: 1%;
+    width: 40px;
+    height: 40px;
   }
 
   .main-btn {
@@ -84,6 +86,7 @@
   }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
+    max-width: 100vw;
     padding: 1rem;
     .left-about {
       display: flex;
@@ -141,6 +144,48 @@
       font-size: 1.5rem;
       text-align: center;
       padding: 1rem 0;
+    }
+  }
+
+  .timeline-items {
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    max-width: 100vw;
+    &::before {
+      width: 3px;
+    }
+    .timeline-item {
+      &:nth-child(odd) {
+        padding-right: calc(50% + 20px);
+      }
+      &:nth-child(even) {
+        padding-left: calc(50% + 20px);
+      }
+    }
+    .timeline-dot {
+      height: 15px;
+      width: 15px;
+      box-shadow: 0 0 10px var(--styling-color-1);
+      left: calc(50% - 7px);
+    }
+    .timeline-date {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--secondary-text-color);
+      margin: 6px 0 15px;
+    }
+    .timeline-content {
+      padding: 1rem;
+      border-radius: 2rem;
+      h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 5px;
+      }
+      p {
+        font-size: 0.8rem;
+        line-height: inherit;
+      }
     }
   }
 }

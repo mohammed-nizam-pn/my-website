@@ -718,6 +718,8 @@ section {
   }
   .theme-btn {
     top: 1%;
+    width: 40px;
+    height: 40px;
   }
   .main-btn {
     font-weight: 500;
@@ -777,6 +779,7 @@ section {
   }
   .about-container {
     grid-template-columns: repeat(1, 1fr);
+    max-width: 100vw;
     padding: 1rem;
   }
   .about-container .left-about {
@@ -833,5 +836,44 @@ section {
     font-size: 1.5rem;
     text-align: center;
     padding: 1rem 0;
+  }
+  .timeline-items {
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    max-width: 100vw;
+  }
+  .timeline-items::before {
+    width: 3px;
+  }
+  .timeline-items .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 20px);
+  }
+  .timeline-items .timeline-item:nth-child(even) {
+    padding-left: calc(50% + 20px);
+  }
+  .timeline-items .timeline-dot {
+    height: 15px;
+    width: 15px;
+    box-shadow: 0 0 10px var(--styling-color-1);
+    left: calc(50% - 7px);
+  }
+  .timeline-items .timeline-date {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    margin: 6px 0 15px;
+  }
+  .timeline-items .timeline-content {
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+  .timeline-items .timeline-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 5px;
+  }
+  .timeline-items .timeline-content p {
+    font-size: 0.8rem;
+    line-height: inherit;
   }
 }/*# sourceMappingURL=styles.css.map */
