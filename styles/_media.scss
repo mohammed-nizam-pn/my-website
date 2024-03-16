@@ -148,24 +148,30 @@
 
   .timeline-items {
     padding: 3rem 1rem;
+    a {
+      display: block;
+    }
     margin: 0 auto;
     max-width: 100vw;
     &::before {
       width: 3px;
+      left: 1.4rem;
     }
     .timeline-item {
-      &:nth-child(odd) {
-        padding-right: calc(50% + 20px);
-      }
+      &:nth-child(odd),
       &:nth-child(even) {
-        padding-left: calc(50% + 20px);
+        padding-left: 37px;
+      }
+      &:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
       }
     }
     .timeline-dot {
       height: 15px;
       width: 15px;
       box-shadow: 0 0 10px var(--styling-color-1);
-      left: calc(50% - 7px);
+      left: 0;
     }
     .timeline-date {
       font-size: 0.9rem;
@@ -182,7 +188,7 @@
         margin: 0 0 5px;
       }
       p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: inherit;
       }
     }
