@@ -7,12 +7,13 @@
 }
 
 :root {
-  --background-1: #e8eceb;
+  --background-1: white; //#e8eceb;
   --text-background-1: #2d3e4e;
-  --text-background-2: #466663;
+  --text-background-2: #5d6163;
   --transition-1: all 0.4s ease-in-out;
   --shadow-1: 0 0 15px rgba(0, 0, 0, 0.7);
   --styling-color-1: #e09e50;
+  --styling-color-2: #17b1b9;
   --heading-color: black;
   --shadow-2: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
@@ -23,6 +24,7 @@
   --text-background-2: #c5b59a;
   --transition-1: all 0.4s ease-in-out;
   --shadow-1: 0 0 15px black;
+  --styling-color-2: #01edfa;
   --heading-color: white;
 }
 
@@ -187,7 +189,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--styling-color-1);
+    border: 2px solid var(--styling-color-2);
     z-index: 2;
     background: transparent;
     &:hover,
@@ -335,7 +337,6 @@ section {
       &:hover {
         cursor: default;
         transform: translateY(-5px);
-        border: 2px solid var(--styling-color-1);
         box-shadow: var(--shadow-2);
       }
       .abt-text {
@@ -345,14 +346,14 @@ section {
         .large-text {
           font-size: 2.5rem;
           font-weight: 700;
-          color: var(--text-background-1);
+          color: var(--text-background-2);
         }
         .small-text {
           padding-left: 3rem;
           position: relative;
           text-transform: uppercase;
           font-size: 1.1rem;
-          color: var(--text-background-2);
+          color: var(--text-background-1);
           letter-spacing: 2px;
           &::before {
             content: "";
@@ -372,11 +373,11 @@ section {
     padding-right: 2.5rem;
     margin: auto;
     h4 {
-      color: var(--heading-color);
+      color: var(--styling-color-1);
     }
     p {
       line-height: 1.8rem;
-      color: var(--text-background-2);
+      color: var(--text-background-1);
       text-align: justify;
     }
     h4 {
@@ -414,7 +415,7 @@ section {
   text-align: center;
   padding: 2rem 0;
   position: relative;
-  color: var(--heading-color);
+  color: var(--styling-color-1);
   &::before {
     content: "";
     position: absolute;
@@ -484,7 +485,6 @@ section {
     background-color: var(--text-background-2);
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 10px var(--box-shadow-1);
     cursor: pointer;
     transition: var(--transition-1);
     color: var(--background-1);
@@ -542,6 +542,7 @@ section {
       h2 {
         margin-bottom: 1rem;
         font-size: 1.5rem;
+        color: var(--styling-color-1);
       }
       p {
         font-size: 0.9rem;
@@ -569,6 +570,7 @@ section {
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
+  color: var(--styling-color-1);
 }
 
 /* Contact Section */
@@ -581,6 +583,7 @@ section {
   h4 {
     text-transform: uppercase;
     margin-bottom: 2rem;
+    color: var(--styling-color-1);
   }
   .contact-btns {
     margin-bottom: 3rem;
@@ -710,13 +713,13 @@ section {
     font-size: 4rem;
     font-weight: 700;
     span {
-      color: var(--text-background-2);
+      color: var(--styling-color-2);
     }
     .bg-text {
       position: absolute;
       top: 50%;
       left: 50%;
-      color: var(--text-background-2);
+      color: var(--styling-color-2);
       transition: all 0.4s ease-in-out;
       z-index: -1;
       transform: translate(-50%, -50%);

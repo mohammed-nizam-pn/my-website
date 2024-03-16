@@ -7,12 +7,13 @@
 }
 
 :root {
-  --background-1: #e8eceb;
+  --background-1: white;
   --text-background-1: #2d3e4e;
-  --text-background-2: #466663;
+  --text-background-2: #5d6163;
   --transition-1: all 0.4s ease-in-out;
   --shadow-1: 0 0 15px rgba(0, 0, 0, 0.7);
   --styling-color-1: #e09e50;
+  --styling-color-2: #17b1b9;
   --heading-color: black;
   --shadow-2: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
@@ -23,6 +24,7 @@
   --text-background-2: #c5b59a;
   --transition-1: all 0.4s ease-in-out;
   --shadow-1: 0 0 15px black;
+  --styling-color-2: #01edfa;
   --heading-color: white;
 }
 
@@ -187,7 +189,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--styling-color-1);
+  border: 2px solid var(--styling-color-2);
   z-index: 2;
   background: transparent;
 }
@@ -309,7 +311,6 @@ section {
 .about-container .right-about .about-item:hover {
   cursor: default;
   transform: translateY(-5px);
-  border: 2px solid var(--styling-color-1);
   box-shadow: var(--shadow-2);
 }
 .about-container .right-about .about-item .abt-text {
@@ -320,14 +321,14 @@ section {
 .about-container .right-about .about-item .abt-text .large-text {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-background-1);
+  color: var(--text-background-2);
 }
 .about-container .right-about .about-item .abt-text .small-text {
   padding-left: 3rem;
   position: relative;
   text-transform: uppercase;
   font-size: 1.1rem;
-  color: var(--text-background-2);
+  color: var(--text-background-1);
   letter-spacing: 2px;
 }
 .about-container .right-about .about-item .abt-text .small-text::before {
@@ -344,11 +345,11 @@ section {
   margin: auto;
 }
 .about-container .left-about h4 {
-  color: var(--heading-color);
+  color: var(--styling-color-1);
 }
 .about-container .left-about p {
   line-height: 1.8rem;
-  color: var(--text-background-2);
+  color: var(--text-background-1);
   text-align: justify;
 }
 .about-container .left-about h4 {
@@ -384,7 +385,7 @@ section {
   text-align: center;
   padding: 2rem 0;
   position: relative;
-  color: var(--heading-color);
+  color: var(--styling-color-1);
 }
 .stat-title::before {
   content: "";
@@ -455,7 +456,6 @@ section {
   background-color: var(--text-background-2);
   padding: 30px 50px;
   border-radius: 4rem;
-  box-shadow: 0 0 10px var(--box-shadow-1);
   cursor: pointer;
   transition: var(--transition-1);
   color: var(--background-1);
@@ -516,6 +516,7 @@ section {
 .project-items .project-item .project-content h2 {
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  color: var(--styling-color-1);
 }
 .project-items .project-item .project-content p {
   font-size: 0.9rem;
@@ -539,6 +540,7 @@ section {
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
+  color: var(--styling-color-1);
 }
 
 /* Contact Section */
@@ -552,6 +554,7 @@ section {
 .contact-container h4 {
   text-transform: uppercase;
   margin-bottom: 2rem;
+  color: var(--styling-color-1);
 }
 .contact-container .contact-btns {
   margin-bottom: 3rem;
@@ -681,13 +684,13 @@ section {
   font-weight: 700;
 }
 .main-title h2 span {
-  color: var(--text-background-2);
+  color: var(--styling-color-2);
 }
 .main-title h2 .bg-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: var(--text-background-2);
+  color: var(--styling-color-2);
   transition: all 0.4s ease-in-out;
   z-index: -1;
   transform: translate(-50%, -50%);
