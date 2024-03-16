@@ -1548,4 +1548,32 @@ section {
     transform: scale(3px);
     box-shadow: var(--shadow-2);
   }
+}
+@media screen and (min-width: 801px) and (max-height: 560px) {
+  .controls {
+    top: 75px;
+    transform: none;
+  }
+  .controls .control {
+    margin: 0 0 0.5rem 0;
+  }
+  .theme-btn {
+    top: 13px;
+  }
+}
+@media screen and (min-width: 801px) and (max-height: 390px) {
+  .controls .control {
+    width: 30px;
+    height: 30px;
+  }
+  .theme-btn {
+    width: 30px;
+    height: 30px;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 801px) and (max-height: 288px) {
+  .controls {
+    top: 13px;
+  }
 }/*# sourceMappingURL=styles.css.map */
