@@ -1,2 +1,3 @@
-# my-website
-This is my personal portfolio website repo. Have a peek!
+# Personal Website
+🚀 Welcome to my personal website repo.🚀 
+Have a peek!
