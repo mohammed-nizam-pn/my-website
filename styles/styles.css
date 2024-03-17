@@ -1392,7 +1392,7 @@ section {
   }
   .contact-container .form input,
   .contact-container .form textarea {
-    min-width: 80vw;
+    min-width: 60vw;
   }
   .contact-container .form button {
     width: auto;
@@ -1535,7 +1535,7 @@ section {
   }
   .contact-container .form input,
   .contact-container .form textarea {
-    min-width: 80vw;
+    min-width: 60vw;
   }
   .contact-container .form button {
     width: auto;
