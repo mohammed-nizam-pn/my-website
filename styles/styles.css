@@ -81,6 +81,7 @@ section {
   }
 }
 
+/*=============== Control Buttons ================*/
 .controls {
   position: fixed;
   z-index: 10;
@@ -119,6 +120,7 @@ section {
   color: var(--background-1);
 }
 
+/*================ Theme Button ================*/
 .theme-btn {
   top: 2%;
   right: 1%;
@@ -143,7 +145,7 @@ section {
   pointer-events: none;
 }
 
-/* Header Section */
+/*=============== Header Section ================*/
 .header {
   display: flex;
   justify-content: center;
@@ -234,7 +236,7 @@ section {
   gap: 2rem;
 }
 
-/* Header - Typing Animation */
+/*========= Header - Typing Animation ===========*/
 .text-animation {
   font-size: 3rem;
   font-weight: 500;
@@ -292,7 +294,7 @@ section {
     width: calc(100% + 8px);
   }
 }
-/* About Section */
+/*=============== About Section ================*/
 .about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -396,7 +398,7 @@ section {
   transform: translateX(-50%);
 }
 
-/* Timeline Section */
+/*============= Timeline Section ==============*/
 .timeline-items {
   margin: auto;
   display: flex;
@@ -477,7 +479,7 @@ section {
   line-height: 22px;
 }
 
-/* Projects Section */
+/*============= Projects Section ==============*/
 .project-items {
   margin: auto;
   display: flex;
@@ -541,7 +543,7 @@ section {
   color: var(--styling-color-1);
 }
 
-/* Contact Section */
+/*============= Contact Section ==============*/
 .contact-container {
   display: flex;
   justify-content: center;
@@ -625,7 +627,8 @@ section {
   display: none;
 }
 
-/*Independed components*/
+/*========== Independed components ===========*/
+/*========== Download CV Button ==============*/
 .btn-con {
   display: flex;
   align-self: flex-start;
@@ -675,6 +678,7 @@ section {
   transition: all 0.4s ease-out;
 }
 
+/*=============== Main Title ================*/
 .main-title {
   text-align: center;
 }

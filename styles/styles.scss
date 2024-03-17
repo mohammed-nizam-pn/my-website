@@ -81,7 +81,7 @@ section {
   }
 }
 
-//Controls
+/*=============== Control Buttons ================*/
 .controls {
   position: fixed;
   z-index: 10;
@@ -120,6 +120,7 @@ section {
   }
 }
 
+/*================ Theme Button ================*/
 .theme-btn {
   top: 2%;
   right: 1%;
@@ -144,7 +145,7 @@ section {
   }
 }
 
-/* Header Section */
+/*=============== Header Section ================*/
 .header {
   display: flex;
   justify-content: center;
@@ -237,8 +238,7 @@ section {
   }
 }
 
-/* Header - Typing Animation */
-
+/*========= Header - Typing Animation ===========*/
 .text-animation {
   font-size: 3rem;
   font-weight: 500;
@@ -321,7 +321,7 @@ section {
   }
 }
 
-/* About Section */
+/*=============== About Section ================*/
 .about-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -426,7 +426,7 @@ section {
   }
 }
 
-/* Timeline Section */
+/*============= Timeline Section ==============*/
 .timeline-items {
   margin: auto;
   display: flex;
@@ -507,7 +507,7 @@ section {
   }
 }
 
-/* Projects Section */
+/*============= Projects Section ==============*/
 .project-items {
   margin: auto;
   display: flex;
@@ -571,7 +571,7 @@ section {
   color: var(--styling-color-1);
 }
 
-/* Contact Section */
+/*============= Contact Section ==============*/
 .contact-container {
   display: flex;
   justify-content: center;
@@ -654,9 +654,9 @@ section {
   }
 }
 
-/*Independed components*/
+/*========== Independed components ===========*/
 
-//Download CV Button
+/*========== Download CV Button ==============*/
 .btn-con {
   display: flex;
   align-self: flex-start;
@@ -706,6 +706,7 @@ section {
   }
 }
 
+/*=============== Main Title ================*/
 .main-title {
   text-align: center;
   h2 {
