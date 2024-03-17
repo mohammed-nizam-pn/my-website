@@ -5,6 +5,8 @@
       this.classList.add("active-btn")
       document.querySelector(".active").classList.remove("active")
       document.getElementById(button.dataset.id).classList.add("active")
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
     })
   })
   document.querySelector(".theme-btn").addEventListener("click", () => {
